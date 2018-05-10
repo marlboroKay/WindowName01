@@ -2,20 +2,19 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	
 </head>
 <body>
-</body>
 	<script>
 		var ifr = document.createElement('iframe');
 		ifr.src = 'https://marlborokay.github.io/WindowName/';
 		document.body.appendChild(ifr);
 		ifr.onload = function(){
-			var data = ifr.contentWindow.name;
-			console.log(data);
+			console.log(ifr.contentWindow.name);
 		}
 		
-			ifr.src = 'b.html'
+		ifr.src = 'b.html'
 		document.body.removeChild(ifr);
 	</script>
+</body>
+	
 </html>
