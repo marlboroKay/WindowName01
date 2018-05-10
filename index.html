@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-  
+	<meta charset="UTF-8">
+	<script>
+		var ifr = document.createElement('iframe');
+		ifr.src = 'https://marlborokay.github.io/WindowName/';
+		document.body.appendChild(ifr);
+		ifr.onload = function(){
+			ifr.src = 'b.html'
+			var data = ifr.contentWindow.name;
+			console.log(data);
+		}
+		document.body.removeChild(ifr);
+	</script>
 </head>
 <body>
-  <script>
-	function getData(){
-		var iframe = document.getElementById('iframe');
-		iframe.onload = function(){
-			var data = iframe.contentWindow.name;
-			alert(data);
-		}
-		iframe.src = 'b.html'
-	}
- </script>
-
-<iframe src="https://marlborokay.github.io/WindowName/" id="iframe" onload="getData()" 
-style="display:none"></iframe>
 </body>
 </html>
