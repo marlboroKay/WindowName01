@@ -5,12 +5,19 @@
 </head>
 <body>
 	<script>
+		var state = 0
 		var ifr = document.createElement('iframe');
 		ifr.src = 'https://marlborokay.github.io/WindowName/';
 		document.body.appendChild(ifr);
 		ifr.onload = function(){
-			ifr.src = 'b.html'
-			console.log(ifr.contentWindow.name);
+			if(state === 1){
+				console.log(ifr.contentWindow.name);
+			}else{
+				state = 1;
+				ifr.src = 'b.html'
+			   }
+			
+			
 		}
 	</script>
 </body>
