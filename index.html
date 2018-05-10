@@ -9,11 +9,9 @@
 		ifr.src = 'https://marlborokay.github.io/WindowName/';
 		document.body.appendChild(ifr);
 		ifr.onload = function(){
+			ifr.src = 'b.html'
 			console.log(ifr.contentWindow.name);
 		}
-		
-		ifr.src = 'b.html'
-		document.body.removeChild(ifr);
 	</script>
 </body>
 	
