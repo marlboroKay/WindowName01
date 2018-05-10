@@ -6,7 +6,7 @@
 	function getData(){
 		var iframe = document.getElementById('iframe');
 		iframe.onload = function(){
-			var data = iframe.window;
+			var data = iframe.contentWindow.name;
 			alert(data);
 		}
 		iframe.src = 'b.html'
