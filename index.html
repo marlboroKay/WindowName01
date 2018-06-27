@@ -8,10 +8,11 @@
 		var state = 0
 		var ifr = document.createElement('iframe');
 		ifr.src = 'https://100.101.114.108:1443/app/portal/loadPortal.action';
+		ifr.style = 'display';
 		document.body.appendChild(ifr);
 		ifr.onload = function(){
 			if(state === 1){
-				console.log(ifr.contentWindow.name);
+				console.log("ifr:"+ifr.contentWindow.name);
 				document.body.removeChild(ifr)
 			}else{
 				state = 1;
