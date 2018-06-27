@@ -11,7 +11,7 @@
 		document.body.appendChild(ifr);
 		ifr.onload = function(){
 			if(state === 1){
-				console.log(ifr.contentWindow);
+				console.log(ifr.contentWindow.name);
 				document.body.removeChild(ifr)
 			}else{
 				state = 1;
